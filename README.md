@@ -1,5 +1,5 @@
 # 💫 About Me:
-echnologies 🔧<br><br>Electronics & Embedded Systems: Microcontrollers, Circuit Design, Signal Processing, FPGA<br>Programming: Python, C++, JavaScript, PHP<br>Web Development: React, Node.js<br>AI & Machine Learning: Deep Learning Frameworks<br>Databases: MySQL<br>Tools: MATLAB, Embedded C<br>Projects 💼<br><br>Motor Monitoring: Real-time data analysis for motors<br>Smart Greenhouse: IoT platform for optimizing plant growth<br>Task Automation: Scripts for automating desktop tasks
+Technologies 🔧<br><br>Electronics & Embedded Systems: Microcontrollers, Circuit Design, Signal Processing, FPGA<br>Programming: Python, C++, JavaScript, PHP<br>Web Development: React, Node.js<br>AI & Machine Learning: Deep Learning Frameworks<br>Databases: MySQL<br>Tools: MATLAB, Embedded C<br>Projects 💼<br><br>Motor Monitoring: Real-time data analysis for motors<br>Smart Greenhouse: IoT platform for optimizing plant growth<br>Task Automation: Scripts for automating desktop tasks
 
 
 ## 🌐 Socials:
