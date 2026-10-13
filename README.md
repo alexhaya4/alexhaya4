@@ -26,23 +26,34 @@ The source repository is private. The projects below provide public examples of 
 
 ## Selected public projects
 
-![Three implementation sketches: TinyML model to C assets to MCU project; speed reference through a controller to a motor; CAN frame through decoding and a queue to an LVGL gauge.](assets/projects.svg)
+![Three implementation sketches: TinyML original graph to checked C++ to ESP32-S3 QEMU; speed reference through a controller to a motor; CAN frame through decoding and a queue to an LVGL gauge.](assets/projects.svg)
 
 The sketches summarize the implementations linked below.
 
 ### TinyML Deployer
 
-**Preparing machine learning models for embedded targets.**
+**Validated model conversion and ESP32-S3 firmware execution.**
 
-A Python command-line tool for analyzing TensorFlow Lite models, generating C model assets and inference wrappers, and preparing project scaffolds for ESP32 and STM32 targets.
+A Python CLI that takes original Keras, SavedModel and ONNX graphs through conversion and quantization, checks prediction error on supplied validation inputs, and generates model-specific ESP-IDF C++ firmware.
 
-- Model inspection and memory estimates for constrained devices.
-- ONNX conversion support and quantization workflows.
-- Separate modules for analysis, code generation, deployment, and performance estimation, with automated tests.
+- Quantization gates use explicit error limits and supplied calibration data where required.
+- Generated C++ registers model operators, checks input/output buffers, and applies explicit arena and flash budgets.
+- Pinned Espressif QEMU runs the compiled float32 and INT8 ESP32-S3 fixtures with ESP-NN optimizations enabled.
+- JSON and HTML reports preserve model and dataset identities, complete observations, and prediction agreement.
 
-**Stack:** Python, TensorFlow Lite, C, ESP-IDF, Click, pytest.
+**Current source version:** `0.2.0b1` (beta). Physical-board validation remains pending. STM32 profiles support analysis only.
 
-[Repository](https://github.com/alexhaya4/tinyml-deployer) · [Code generation](https://github.com/alexhaya4/tinyml-deployer/blob/main/tinyml_deployer/codegen.py) · [Tests](https://github.com/alexhaya4/tinyml-deployer/tree/main/tests)
+[![Animated preview of recorded TinyML quantization and ESP32-S3 emulator validation.](https://raw.githubusercontent.com/alexhaya4/tinyml-deployer/main/docs/walkthrough/v0.2.0-beta.1/preview.gif)](https://github.com/alexhaya4/tinyml-deployer/blob/main/docs/walkthrough/v0.2.0-beta.1/walkthrough.mp4)
+
+**[Watch the 54-second walkthrough](https://github.com/alexhaya4/tinyml-deployer/blob/main/docs/walkthrough/v0.2.0-beta.1/walkthrough.mp4)** · [Static poster](https://github.com/alexhaya4/tinyml-deployer/blob/main/docs/walkthrough/v0.2.0-beta.1/poster.png) · [Transcript and reproduction](https://github.com/alexhaya4/tinyml-deployer/tree/main/docs/walkthrough/v0.2.0-beta.1)
+
+*Captioned, silent replay of recorded CLI output. The sine conversion example and the two compiled emulator fixtures are identified separately; presentation timing is edited.*
+
+The archived float32 and INT8 fixtures each completed 24 QEMU inference observations within their configured prediction-error limits. These are different test graphs, each compared with its own desktop model. The results do not establish comparative task accuracy, quantization savings, or physical-board speed.
+
+**Stack:** Python, TensorFlow Lite Micro, C++, ESP-IDF, ESP-NN, Espressif QEMU, Click, pytest.
+
+[Repository](https://github.com/alexhaya4/tinyml-deployer) · [Beta notes](https://github.com/alexhaya4/tinyml-deployer/blob/main/docs/releases/v0.2.0-beta.1.md) · [Archived CI evidence](https://github.com/alexhaya4/tinyml-deployer/tree/main/docs/evidence/qemu-2026-10-13) · [Tests](https://github.com/alexhaya4/tinyml-deployer/tree/main/tests)
 
 ### Neuro-Fuzzy DC Motor Control
 
@@ -88,7 +99,7 @@ For engineering collaborations and project discussions, connect with me through 
 <details>
 <summary>About the visuals</summary>
 
-Original SVG illustrations and an animated architecture diagram, with visual inspiration from [Beautiful UI](https://www.beautifului.dev/): charcoal surfaces, rounded cards, compact labels, and a dotted workflow canvas. The figures are conceptual diagrams based on the projects, rather than application screenshots. All image assets are stored in this repository.
+Original SVG illustrations and an animated architecture diagram, with visual inspiration from [Beautiful UI](https://www.beautifului.dev/): charcoal surfaces, rounded cards, compact labels, and a dotted workflow canvas. The project sketches and RL Gym animation are conceptual diagrams. The TinyML preview replays recorded CLI output and links to its transcript and evidence. Portfolio illustrations are stored here; TinyML media is stored in the TinyML Deployer repository.
 
 </details>
 

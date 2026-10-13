@@ -5,17 +5,17 @@
 <rect x="24" y="64" width="368" height="290" rx="16" fill="#222426" stroke="#393c40"/>
 <text x="47" y="100" fill="#83dbbc" font-family="DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="700" >01</text>
 <text x="47" y="133" fill="#f3f4f6" font-family="DejaVu Sans, Arial, sans-serif" font-size="23" font-weight="700" >TINYML DEPLOYER</text>
-<text x="47" y="161" fill="#afb4bd" font-family="DejaVu Sans, Arial, sans-serif" font-size="15" font-weight="400" >Model assets for microcontrollers</text>
+<text x="47" y="161" fill="#afb4bd" font-family="DejaVu Sans, Arial, sans-serif" font-size="15" font-weight="400" >Validated ESP32-S3 execution</text>
 <circle cx="56" cy="190" r="4" fill="#83dbbc"/>
-<text x="73" y="196" fill="#f3f4f6" font-family="DejaVu Sans, Arial, sans-serif" font-size="16" font-weight="400" >TFLite model</text>
+<text x="73" y="196" fill="#f3f4f6" font-family="DejaVu Sans, Arial, sans-serif" font-size="16" font-weight="400" >Original model graph</text>
 <path d="M56 197 L56 223" fill="none" stroke="#393c40" stroke-width="2" />
 <circle cx="56" cy="230" r="4" fill="#83dbbc"/>
-<text x="73" y="236" fill="#f3f4f6" font-family="DejaVu Sans, Arial, sans-serif" font-size="16" font-weight="400" >C model assets</text>
+<text x="73" y="236" fill="#f3f4f6" font-family="DejaVu Sans, Arial, sans-serif" font-size="16" font-weight="400" >Checked C++ firmware</text>
 <path d="M56 237 L56 263" fill="none" stroke="#393c40" stroke-width="2" />
 <circle cx="56" cy="270" r="4" fill="#83dbbc"/>
-<text x="73" y="276" fill="#f3f4f6" font-family="DejaVu Sans, Arial, sans-serif" font-size="16" font-weight="400" >MCU project</text>
+<text x="73" y="276" fill="#f3f4f6" font-family="DejaVu Sans, Arial, sans-serif" font-size="16" font-weight="400" >ESP32-S3 in QEMU</text>
 <path d="M48 301 L368 301" fill="none" stroke="#393c40" stroke-width="2" />
-<text x="48" y="330" fill="#83dbbc" font-family="DejaVu Sans, Arial, sans-serif" font-size="10.5" font-weight="700" letter-spacing="0.7">MODEL ANALYSIS / CODE GENERATION</text>
+<text x="48" y="330" fill="#83dbbc" font-family="DejaVu Sans, Arial, sans-serif" font-size="10.5" font-weight="700" letter-spacing="0.7">ERROR GATES / COMPILED EXECUTION</text>
 <rect x="416" y="64" width="368" height="290" rx="16" fill="#222426" stroke="#393c40"/>
 <text x="439" y="100" fill="#91a7ff" font-family="DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="700" >02</text>
 <text x="439" y="133" fill="#f3f4f6" font-family="DejaVu Sans, Arial, sans-serif" font-size="23" font-weight="700" >MOTOR CONTROL</text>
