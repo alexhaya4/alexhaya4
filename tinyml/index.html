@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="index,follow"><meta name="description" content="TinyML Deployer: model conversion, generated ESP32-S3 firmware, a Signal to Silicon film and traceable QEMU validation evidence.">
+<title>TinyML Deployer | Alex Haya</title>
+<link rel="stylesheet" href="../assets/assembly.css"><script type="module" src="../assets/evidence.mjs"></script>
+<link rel="canonical" href="https://alexhaya4.github.io/alexhaya4/tinyml/"></head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="mast"><div><a class="wordmark" href="../">Alex Haya</a><div class="disciplines">Backend engineering / AI infrastructure / Python</div></div><nav aria-label="Main"><a href="../#articles">Articles</a><a href="../papers/">Papers</a><a href="../">All work</a><a href="./" aria-current="page">TinyML study</a><a href="#evidence">Evidence</a><a href="https://github.com/alexhaya4/tinyml-deployer">Source code</a></nav></header>
+<main class="folio" id="main">
+<div class="project-main">
+<aside class="project-spine" aria-label="Project identity"><span class="small">ALEX<br>HAYA</span><span class="vertical" aria-hidden="true">TINYML / 01</span><span class="small">SOURCE<br>FIRMWARE<br>EVIDENCE</span></aside>
+<div>
+<div class="project-title"><div><p class="eyebrow">Case study / v0.2.0-beta.1</p><h1>TinyML Deployer</h1><p>From original graph to checked ESP32-S3 execution.</p></div><div class="text-links"><a href="https://github.com/alexhaya4/tinyml-deployer">Source code ↗</a><a href="#film">Watch film ↓</a><a href="#evidence">Read reports ↓</a></div></div>
+<section class="project-film" id="film" aria-labelledby="film-title">
+<div class="film-heading"><h2 id="film-title">Signal to Silicon</h2><p>36 seconds / Sound on</p></div>
+<video controls playsinline preload="none" poster="../assets/signal-to-silicon-poster.jpg" width="1920" height="1080" aria-label="Signal to Silicon: TinyML Deployer launch film" aria-describedby="film-description">
+<source src="../assets/tinyml-signal-to-silicon-caedd65f39d3.mp4" type="video/mp4">
+<track kind="captions" src="../assets/signal-to-silicon-en.vtt" srclang="en" label="English">
+<a href="../assets/tinyml-signal-to-silicon-caedd65f39d3.mp4">Download Signal to Silicon</a>
+</video>
+<p id="film-description">Follow a signal through the model graph, INT8 weights, generated C++ and measured prediction differences to the ESP32-S3 target. The board photograph is a hardware reference; physical-board testing remains pending.</p>
+<div class="film-links"><a href="../assets/tinyml-signal-to-silicon-caedd65f39d3.mp4" download="tinyml-signal-to-silicon.mp4">Download film</a><span>Board photograph: Espressif. Film: Alex Haya. <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.</span></div>
+</section>
+<div class="stage-tabs" role="tablist" aria-label="Pipeline stages">
+<button class="stage-tab" id="tab-source" type="button" role="tab" aria-selected="true" aria-controls="stage-source" tabindex="0" data-stage="source"><span>01 / Original graph</span>Source</button>
+<button class="stage-tab" id="tab-code" type="button" role="tab" aria-selected="false" aria-controls="stage-code" tabindex="-1" data-stage="code"><span>02 / Conversion and generation</span>Checked C++</button>
+<button class="stage-tab" id="tab-build" type="button" role="tab" aria-selected="false" aria-controls="stage-build" tabindex="-1" data-stage="build"><span>03 / Firmware identities</span>Compiled build</button>
+<button class="stage-tab" id="tab-qemu" type="button" role="tab" aria-selected="false" aria-controls="stage-qemu" tabindex="-1" data-stage="qemu"><span>04 / Execution records</span>QEMU evidence</button>
+</div>
+<section class="stage-panel" role="tabpanel" id="stage-source" aria-labelledby="tab-source">
+<div class="stage-artifact"><div class="artifact-head"><span>HARDWARE REFERENCE / ESP32-S3</span></div><div class="artifact-body"><div class="artifact-board"><p>Original graph.<br>Explicit limits.<br>Traceable output.</p><img src="../assets/esp32-s3-board.png" width="800" height="695" alt="Espressif ESP32-S3-DevKitC-1 development board, official manufacturer reference image."></div></div></div>
+<aside class="stage-note"><div class="note-line"><h3>Source</h3><p>Accept original Keras, SavedModel or ONNX graphs. Supply representative calibration data when required, held-out validation inputs and an explicit error limit.</p><a href="https://github.com/alexhaya4/tinyml-deployer/blob/v0.2.0-beta.1/examples/sine_model/README.md">Follow the sine example ↗</a></div><div class="note-line"><h3>Hardware status</h3><p>The board image identifies the target family. Physical-board testing remains pending. The verified execution evidence is from QEMU.</p></div></aside>
+</section>
+<section class="stage-panel" role="tabpanel" id="stage-code" aria-labelledby="tab-code" hidden>
+<div class="stage-artifact"><div class="artifact-head"><span>ARCHIVED GENERATED SOURCE / inference.cpp</span><button type="button" id="copy-source" disabled>Copy source</button></div><div class="artifact-body"><p class="loading" id="source-loading">Reading the archived generated file.</p><pre><code id="source-code"></code></pre></div></div>
+<aside class="stage-note"><div class="note-line"><h3>Numerical gate</h3><p id="quantization-summary">Reading the archived quantization report.</p><a href="../assets/quantization.json">Inspect conversion report ↗</a></div><div class="note-line"><h3>Artifact boundary</h3><p>This source comes from the generated sine project in the recording. That project was not compiled or emulated during the recording. The compiled CI fixtures are separate.</p><a href="../assets/deployment.json">Read its deployment manifest ↗</a></div></aside>
+</section>
+<section class="stage-panel" role="tabpanel" id="stage-build" aria-labelledby="tab-build" hidden>
+<div class="stage-artifact"><div class="artifact-head"><span>ARCHIVED CI / COMPILED FIRMWARE</span><a href="https://github.com/alexhaya4/tinyml-deployer/actions/runs/38444732537">Source run ↗</a></div><div class="artifact-body"><h2>Identify the binary.</h2><p>The reports identify the bootloader, partition table and application binary for each integration fixture.</p><div id="firmware-list" class="loading">Verifying archived firmware identities.</div></div></div>
+<aside class="stage-note"><div class="note-line"><h3>Build environment</h3><p>ESP-IDF 5.5.1, TensorFlow Lite Micro 1.4.1 and ESP-NN 1.4.1. The archived CI run completed successfully.</p></div><div class="note-line"><h3>Separate fixtures</h3><p>Float32 uses a dense graph; INT8 uses a convolutional graph. Binary sizes from these different graphs do not establish quantization savings.</p></div></aside>
+</section>
+<section class="stage-panel" role="tabpanel" id="stage-qemu" aria-labelledby="tab-qemu" hidden>
+<div class="stage-artifact"><div class="artifact-head"><span>ARCHIVED EXECUTION / 13 OCTOBER 2026</span><a href="#evidence">Inspect records ↓</a></div><div class="artifact-body"><h2>Execution with an audit trail.</h2><p id="execution-summary" class="loading">Verifying the preserved report files.</p><ul class="task-list">
+<li><details><summary>Report integrity<strong id="integrity-status">Reading</strong></summary><p>Each report is checked against the SHA-256 hash in its preserved provenance manifest before its records are displayed.</p></details></li>
+<li><details><summary>Run identity<strong id="identity-status">Reading</strong></summary><p>Begin, sample and done records must share a run identity. Model and dataset identities must match the report summary.</p></details></li>
+<li><details><summary>Complete observations<strong id="observations-status">Reading</strong></summary><p>Observation counts, unique sample/repetition pairs and the aggregate error are checked against the actual record stream.</p></details></li>
+<li><details><summary>Physical-board validation<strong>Not run</strong></summary><p>These archived records describe emulator execution. They do not establish physical-device speed, power consumption or application accuracy.</p></details></li>
+</ul></div></div>
+<aside class="stage-note"><div class="note-line"><h3>Prediction agreement</h3><p>Each firmware fixture is compared with desktop execution of its own deployed model, under the supplied error limit.</p></div><div class="note-line"><h3>Recorded scope</h3><p>These are archived results. No firmware is being compiled or executed by this page.</p><a href="../assets/provenance.json">Source and checksums ↗</a></div></aside>
+</section>
+<div class="status-line"><span class="status-dot">QEMU verification: archived evidence</span><span class="status-dot pending">Physical-board validation pending</span></div>
+<div id="data-error" role="alert" class="notice" hidden></div>
+<section id="evidence" aria-labelledby="evidence-title">
+<div class="section-rule"><h2 id="evidence-title">Inspect the observations.</h2><p>Records Table / sortable, filterable, traceable</p></div>
+<p class="caution">The fixtures use different model graphs. Inspect each independently. Recorded latency describes emulated time and cannot establish physical-board performance.</p>
+<div class="evidence-controls"><fieldset id="fixture-controls" disabled><legend>Integration fixture</legend><label><input type="radio" name="fixture" value="float32" checked> Float32 dense</label><label><input type="radio" name="fixture" value="int8"> INT8 convolutional</label></fieldset><label>Sample<select id="sample-filter" disabled><option value="all">All samples</option></select></label></div>
+<div class="table-scroll"><table id="records-table"><caption id="table-caption">Verifying the archived reports before displaying observations.</caption><thead><tr>
+<th scope="col" aria-sort="ascending"><button type="button" data-sort="sample">Sample ↑</button></th><th scope="col" aria-sort="none"><button type="button" data-sort="repetition">Repetition</button></th><th scope="col" aria-sort="none"><button type="button" data-sort="max_abs_error">Max abs. error</button></th><th scope="col" aria-sort="none"><button type="button" data-sort="latency_us">Emulated time (µs)</button></th><th scope="col" aria-sort="none"><button type="button" data-sort="arena_used_bytes">Arena used (bytes)</button></th><th scope="col">Source record</th>
+</tr></thead><tbody id="records-body"></tbody></table></div>
+<div class="table-meta"><span id="record-count" role="status" aria-live="polite">Loading archived data.</span><a id="download-report" href="../assets/float32.json" download>Download selected JSON report ↗</a></div>
+</section>
+<section aria-labelledby="run-title">
+<div class="section-rule"><h2 id="run-title">Run the workflow.</h2><p>Code Block / tagged source</p></div>
+<p class="caution">Python 3.11 or 3.12. Install this version from source; the older published 0.1 PyPI package uses a different interface.</p>
+<div class="stage-artifact"><div class="artifact-head"><span>INSTALL / LINUX, WSL OR macOS</span><button id="copy-install" type="button">Copy commands</button></div><div class="artifact-body"><pre><code id="install-code">git clone --branch v0.2.0-beta.1 --depth 1 \
+  https://github.com/alexhaya4/tinyml-deployer.git
+cd tinyml-deployer
+python -m venv .venv
+. .venv/bin/activate
+python -m pip install -e '.[emulation]'
+tinyml-deployer --help</code></pre></div></div>
+<p id="copy-feedback" role="status" aria-live="polite" class="eyebrow"></p>
+<p class="text-links"><a href="https://github.com/alexhaya4/tinyml-deployer/blob/v0.2.0-beta.1/docs/emulation.md">Pinned emulator setup ↗</a><a href="https://github.com/alexhaya4/tinyml-deployer/blob/v0.2.0-beta.1/examples/sine_model/README.md">Complete sine workflow ↗</a></p>
+</section>
+<details class="archive-film"><summary>Watch the archived 54-second CLI recording</summary><p>This is the previous captioned, silent replay of recorded command output. It is included as source material, not presented as a new hardware film. The sine conversion and separate compiled firmware fixtures are identified in the transcript.</p><video controls playsinline preload="none" poster="../assets/archived-poster.png" width="1280" height="720" aria-label="Archived TinyML command recording"><source src="../assets/archived-walkthrough.mp4" type="video/mp4"><a href="../assets/archived-walkthrough.mp4">Download the archived recording</a></video><p><a href="https://github.com/alexhaya4/tinyml-deployer/blob/v0.2.0-beta.1/docs/walkthrough/v0.2.0-beta.1/transcript.md">Complete recording transcript ↗</a></p></details>
+</div></div></main>
+<footer class="review-foot"><p>ESP32-S3 photograph: <a href="https://github.com/espressif/esp-dev-kits/blob/master/docs/_static/esp32-s3-devkitc-1/esp32-s3-devkitc-1-v1.1-isometric.png">Espressif</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.</p><div class="foot-links"><a href="../">Back to portfolio</a><a href="https://github.com/alexhaya4/tinyml-deployer">Project repository</a></div></footer>
+<dialog id="record-dialog" aria-labelledby="record-title"><div class="dialog-head"><h2 id="record-title">Source observation</h2><form method="dialog"><button type="submit">Close</button></form></div><div class="dialog-content"><p id="record-context"></p><dl><dt>Model SHA-256</dt><dd id="record-model"></dd><dt>Dataset SHA-256</dt><dd id="record-dataset"></dd></dl><pre id="record-json"></pre><a href="https://github.com/alexhaya4/tinyml-deployer/actions/runs/38444732537">Original CI run ↗</a></div></dialog>
+<noscript><p class="notice">Enable JavaScript to browse the records and pipeline stages. Raw reports remain available: <a href="../assets/float32.json">float32</a> and <a href="../assets/int8.json">INT8</a>.</p></noscript>
+</body></html>

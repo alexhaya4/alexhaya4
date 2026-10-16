@@ -1,6 +1,2 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://alexhaya4.github.io/alexhaya4/</loc></url>
-  <url><loc>https://alexhaya4.github.io/alexhaya4/projects/tinyml-deployer/</loc></url>
-</urlset>
-
+<?xml version='1.0' encoding='utf-8'?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>https://alexhaya4.github.io/alexhaya4/articles/dc-motor-training-station/</loc><lastmod>2026-10-16</lastmod></url><url><loc>https://alexhaya4.github.io/alexhaya4/</loc><lastmod>2026-10-16</lastmod></url><url><loc>https://alexhaya4.github.io/alexhaya4/papers/</loc><lastmod>2026-10-16</lastmod></url><url><loc>https://alexhaya4.github.io/alexhaya4/tinyml/</loc><lastmod>2026-10-16</lastmod></url></urlset>

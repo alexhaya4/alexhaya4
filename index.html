@@ -1,126 +1,72 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Alex Haya | AI Evaluation, Embedded Systems and Applied ML</title>
-  <meta name="description" content="Alex Haya builds AI evaluation infrastructure, embedded firmware and applied machine learning tools. Explore TinyML Deployer and validated ESP32-S3 QEMU execution.">
-  <link rel="canonical" href="https://alexhaya4.github.io/alexhaya4/">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Alex Haya | AI Evaluation and Embedded Systems">
-  <meta property="og:description" content="Engineering work across model evaluation, reliable software and physical systems. Featuring TinyML Deployer for ESP32-S3.">
-  <meta property="og:url" content="https://alexhaya4.github.io/alexhaya4/">
-  <meta property="og:image" content="https://alexhaya4.github.io/alexhaya4/assets/tinyml-poster.png">
-  <meta property="og:image:alt" content="TinyML Deployer recorded workflow: original graphs, checked C++ and ESP32-S3 QEMU execution.">
-  <meta name="twitter:card" content="summary_large_image">
-  <link rel="stylesheet" href="assets/site.css">
-  <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"Person","name":"Alex Haya","url":"https://alexhaya4.github.io/alexhaya4/","sameAs":["https://github.com/alexhaya4","https://ke.linkedin.com/in/alex-haya"],"knowsAbout":["AI evaluation","Cybersecurity","Embedded systems","Applied machine learning"]}
-  </script>
-</head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="index,follow"><meta name="description" content="Alex Haya's engineering portfolio: Python backend systems, AI infrastructure, agent evaluation and embedded engineering.">
+<title>Alex Haya | Backend Engineering &amp; AI Infrastructure</title>
+<link rel="stylesheet" href="assets/assembly.css">
+<script type="module" src="assets/home.mjs"></script>
+<link rel="canonical" href="https://alexhaya4.github.io/alexhaya4/"></head>
 <body>
-  <a class="skip" href="#main">Skip to content</a>
-  <header class="site-header">
-    <div class="wrap">
-      <a class="brand" href="./" aria-current="page">Alex Haya</a>
-      <nav aria-label="Main navigation">
-        <a href="#projects">Projects</a>
-        <a href="#current-work">Current work</a>
-        <a href="#connect">Connect</a>
-        <a href="https://github.com/alexhaya4">GitHub</a>
-      </nav>
-    </div>
-  </header>
-  <main id="main" class="wrap">
-    <section class="hero" aria-labelledby="intro-title">
-      <p class="eyebrow">AI evaluation / Embedded systems / Applied ML</p>
-      <h1 id="intro-title">Models, software.<br>Physical systems.</h1>
-      <p class="lead">I work across AI evaluation, cybersecurity and embedded systems, with a background in electrical and electronics engineering. I build tools that connect model behavior, software reliability and physical systems.</p>
-      <p class="reading muted">My work spans Python APIs, evaluation infrastructure, microcontroller firmware and intelligent control. I focus on clear evaluation criteria, failure analysis and implementations that can be inspected and tested.</p>
-      <div class="actions">
-        <a class="button primary" href="projects/tinyml-deployer/">Explore TinyML Deployer</a>
-        <a class="button" href="#projects">View selected projects</a>
-      </div>
-    </section>
-    <section id="projects" class="section" aria-labelledby="projects-title">
-      <p class="eyebrow">Selected public work</p>
-      <h2 id="projects-title">From model to execution.</h2>
-      <p class="section-intro">Public implementations across machine learning deployment, motor control and embedded interfaces.</p>
-      <article class="feature">
-        <div>
-          <p class="eyebrow">Featured project / v0.2.0-beta.1</p>
-          <h3>TinyML Deployer</h3>
-          <p>Validate model predictions, generate ESP-IDF firmware and check compiled ESP32-S3 execution in QEMU without a physical board.</p>
-          <div class="badges" aria-label="Project technologies">
-            <span class="badge accent">ESP32-S3</span><span class="badge">Python + C++</span><span class="badge">Espressif QEMU</span>
-          </div>
-          <p class="meta">Float32 and INT8 integration fixtures verified in CI. Physical-board validation remains pending.</p>
-          <div class="actions">
-            <a class="button primary" href="projects/tinyml-deployer/">Read the case study</a>
-            <a href="https://github.com/alexhaya4/tinyml-deployer">View repository</a>
-          </div>
-        </div>
-        <figure>
-          <a href="projects/tinyml-deployer/#walkthrough" aria-label="Watch the TinyML Deployer walkthrough">
-            <img src="assets/tinyml-poster.png" width="1280" height="720" alt="TinyML Deployer walkthrough poster showing original graphs, checked C++ and compiled ESP32-S3 execution." fetchpriority="high">
-          </a>
-          <figcaption>A 54-second edited replay of recorded CLI output, with linked command records and reports.</figcaption>
-        </figure>
-      </article>
-      <div class="grid" style="margin-top:1.5rem">
-        <article class="card">
-          <p class="eyebrow">Control systems</p>
-          <h3>Neuro-Fuzzy DC Motor Control</h3>
-          <p>Compare PI, PID, fuzzy logic and neural-tuned fuzzy controllers in a Raspberry Pi motor-control project, with sensor feedback, plotting and data export.</p>
-          <p class="meta">Python / Raspberry Pi / TensorFlow / GPIO / PWM</p>
-          <a href="https://github.com/alexhaya4/dc-motor-neuro-fuzzy">Explore motor-control implementation</a>
-        </article>
-        <article class="card">
-          <p class="eyebrow">Embedded interfaces</p>
-          <h3>ESP32 CAN Display</h3>
-          <p>Receive CAN frames through the TWAI driver, decode a signal and update an LVGL gauge through separate FreeRTOS tasks and a queue.</p>
-          <p class="meta">C / ESP32-S3 / ESP-IDF / FreeRTOS / CAN / LVGL</p>
-          <a href="https://github.com/alexhaya4/esp32_can_display">Explore CAN display firmware</a>
-        </article>
-      </div>
-    </section>
-    <section id="current-work" class="section" aria-labelledby="work-title">
-      <div class="grid">
-        <div>
-          <p class="eyebrow">Current work / Private source</p>
-          <h2 id="work-title">RL Gym</h2>
-          <p class="lead">A Python platform for reinforcement learning, machine learning workflows and AI agent evaluation.</p>
-        </div>
-        <div class="card">
-          <p>The platform brings together experiment tracking, dataset management, model evaluation and background job processing.</p>
-          <p>My current focus includes repeated-run evaluation, evaluator-controlled scoring, adversarial testing and reliable execution.</p>
-          <p class="meta">Python / FastAPI / PostgreSQL / Redis / Docker / PyTorch / Gymnasium / scikit-learn</p>
-          <p class="meta">The source repository is private. Selected public projects provide inspectable examples of my implementation work.</p>
-        </div>
-      </div>
-    </section>
-    <section class="section" aria-labelledby="focus-title">
-      <p class="eyebrow">Technical focus</p>
-      <h2 id="focus-title">Reliable across boundaries.</h2>
-      <div class="grid">
-        <div><h3>AI evaluation and security</h3><p class="muted">Agent evaluation, adversarial testing, repeated-run analysis and failure investigation.</p></div>
-        <div><h3>Backend engineering</h3><p class="muted">Python, FastAPI, SQLAlchemy, PostgreSQL, Redis and Docker.</p></div>
-        <div><h3>Embedded systems</h3><p class="muted">C/C++, ESP32, STM32, FreeRTOS, CAN/TWAI and LVGL.</p></div>
-        <div><h3>Applied ML and control</h3><p class="muted">TensorFlow/Keras, PyTorch, scikit-learn, PID, fuzzy logic and model deployment.</p></div>
-      </div>
-    </section>
-    <section id="connect" class="section" aria-labelledby="connect-title">
-      <p class="eyebrow">Engineering collaborations</p>
-      <h2 id="connect-title">Build, test, investigate.</h2>
-      <p class="section-intro">For engineering collaborations and project discussions, connect with me on GitHub or LinkedIn. ESP32-S3 owners can help extend TinyML Deployer's validation to physical hardware.</p>
-      <div class="actions">
-        <a class="button primary" href="https://github.com/alexhaya4">Connect on GitHub</a>
-        <a class="button" href="https://ke.linkedin.com/in/alex-haya">Connect on LinkedIn</a>
-        <a href="projects/tinyml-deployer/#contribute">Help validate TinyML on a board</a>
-      </div>
-    </section>
-  </main>
-  <footer><div class="wrap footer-inner"><p>Alex Haya / Engineering portfolio</p><a href="https://github.com/alexhaya4/alexhaya4">Portfolio source</a></div></footer>
-</body>
-</html>
+<a href="#main" class="skip">Skip to content</a>
+<header class="mast">
+<div><a class="wordmark" href="./" aria-current="page">Alex Haya</a><div class="disciplines">Backend engineering / AI infrastructure / Python</div></div>
+<nav aria-label="Main"><a href="#work">Work</a><a href="#articles">Articles</a><a href="papers/">Papers</a><a href="#about">About</a><a href="https://github.com/alexhaya4">GitHub</a></nav>
+</header>
+<main class="folio" id="main">
+<h1 class="sr-only">Alex Haya: selected engineering work</h1>
+<div class="surname" aria-hidden="true">HAYA</div>
+<div class="assembly-home" id="work">
+<aside class="intro-rail"><p class="eyebrow">Nairobi, Kenya<br>Backend &amp; AI infrastructure</p><p>I build Python services and the systems around AI agents: evaluation, model integration, background execution and observability. My work also spans embedded ML and control systems.</p><p><a href="https://www.linkedin.com/in/alexhaya4">Connect on LinkedIn</a></p></aside>
+<div>
+<div class="stack" aria-label="Selected project assembly">
+<article class="layer" data-project="tinyml" data-position="front">
+<button class="layer-select" type="button" data-select-project="tinyml" aria-pressed="true"><span class="number">01 /</span>TinyML Deployer</button>
+<div class="layer-content"><div class="construction" aria-hidden="true"></div><p class="layer-summary">Original graph.<br>Checked C++.<br>Compiled execution.</p><img class="board-object" src="assets/esp32-s3-board.png" width="800" height="695" alt="Espressif ESP32-S3-DevKitC-1 board, manufacturer reference photograph."><p class="object-caption">Genuine Espressif board image.<br>Hardware reference, with physical testing pending.</p><a class="layer-link" href="tinyml/">Open project →</a><span class="pipeline-mini">Source / Firmware / Evidence</span></div>
+</article>
+<article class="layer" data-project="rlgym" data-position="middle">
+<button class="layer-select" type="button" data-select-project="rlgym" aria-pressed="false"><span class="number">02 /</span>Rylgam / RL Gym</button>
+<div class="layer-content" inert><p class="layer-summary">AI evaluation<br>and ML workflows.</p><div class="typographic-object" aria-hidden="true">RL<br>GYM</div><p class="object-caption">Python / FastAPI / PostgreSQL / Redis<br>Private source. Evaluation infrastructure.</p><a class="layer-link" href="#rl-gym">Read project notes →</a><span class="pipeline-mini">Evaluate / Queue / Record</span></div>
+</article>
+<article class="layer" data-project="can" data-position="back">
+<button class="layer-select" type="button" data-select-project="can" aria-pressed="false"><span class="number">03 /</span>CAN Display</button>
+<div class="layer-content" inert><p class="layer-summary">CAN frames.<br>Decoded signals.<br>Embedded interface.</p><div class="typographic-object" aria-hidden="true">CAN<br>TWAI</div><p class="object-caption">ESP32-S3 / FreeRTOS / LVGL<br>Queue-based reception and display updates.</p><a class="layer-link" href="https://github.com/alexhaya4/esp32_can_display">Explore firmware →</a><span class="pipeline-mini">Receive / Decode / Display</span></div>
+</article>
+</div>
+<div class="project-ledger" aria-label="Project selector">
+<button class="ledger-button" type="button" data-select-project="tinyml" aria-pressed="true"><span>01 / Embedded ML</span>TinyML Deployer</button>
+<button class="ledger-button" type="button" data-select-project="rlgym" aria-pressed="false"><span>02 / Evaluation</span>Rylgam / RL Gym</button>
+<button class="ledger-button" type="button" data-select-project="can" aria-pressed="false"><span>03 / Firmware</span>CAN Display</button>
+<a class="ledger-button" href="#project-index"><span>04 / All projects</span>Explore the project index</a>
+</div>
+<p class="sr-only" id="project-announcement" aria-live="polite"></p>
+</div>
+</div>
+<section class="neuro" id="rl-gym"><div><p class="eyebrow">Current work / Founder &amp; engineer</p><h2>Rylgam <span class="project-alias">/ RL Gym</span></h2></div><div><p>An evaluation platform for AI agents. I build the Python backend, model API clients and background workers, with isolated agent execution, tenant access controls and usage tracking.</p><p class="eyebrow" style="margin-top:14px">FastAPI / PostgreSQL / Redis / React &amp; TypeScript</p><p>Current development includes retrieval with pgvector and preparation for AWS deployment.</p></div></section>
+<section class="catalogue about-section" id="about" aria-labelledby="about-title"><div class="catalogue-heading"><div><p class="eyebrow">About / Selected experience</p><h2 id="about-title">Backend systems.<br>Evaluation rigor.<br>Engineering depth.</h2></div><p>I'm Alex Odhiambo Haya, a backend software engineer in Nairobi. I've built Python services and APIs since 2021, with recent work focused on AI infrastructure and agent evaluation.</p></div>
+<div class="experience-register">
+<article><p class="eyebrow">Jan 2026 to present</p><h3>Founder &amp; Engineer</h3><p class="experience-org">Rylgam / RL Gym</p><p>AI agent evaluation infrastructure, model API integration, sandboxed execution and multi-tenant backend systems.</p></article>
+<article><p class="eyebrow">2021 to present</p><h3>Freelance Software Engineer</h3><p class="experience-org">Upwork &amp; direct clients</p><p>Python APIs, connected-device backends, data pipelines and AWS deployments for international clients.</p></article>
+<article><p class="eyebrow">Aug 2025 to Feb 2026</p><h3>AI Training &amp; Evaluation Specialist</h3><p class="experience-org">Turing</p><p>Contributor team leadership, agent red teaming, coding evaluation tasks and reproducible failure cases.</p></article>
+</div><div class="practice-register"><p><strong>Backend</strong>Python, FastAPI, PostgreSQL, Redis and background workers.</p><p><strong>AI infrastructure</strong>Model APIs, retrieval, evaluation and sandboxed agent execution.</p><p><strong>Engineering foundation</strong>Electrical and electronics engineering at Murang'a University of Technology.</p></div><div class="text-links"><a href="mailto:alexhaya4@gmail.com">Email Alex</a><a href="https://www.linkedin.com/in/alexhaya4">LinkedIn</a><a href="https://github.com/alexhaya4">GitHub</a></div></section>
+<section class="catalogue research-note" id="current-research" aria-labelledby="research-title"><div><p class="eyebrow">Current research / Unpublished manuscript</p><h2 id="research-title">What Resists<br>Relocation.</h2></div><div><p>When does a benchmark task still look like a test after its instructions are rewritten as a deployment request?</p><p>My reward hacking research examines what prevents that reframing, how to assess the resulting task pairs, and where automated measurement fails.</p><a class="ink-link" href="papers/#reward-hacking">Read the research summary →</a></div></section>
 
+<section class="catalogue" id="project-index" aria-labelledby="projects-title">
+<div class="catalogue-heading"><div><p class="eyebrow">01 / Project register</p><h2 id="projects-title">Built, studied,<br>still developing.</h2></div><p>Embedded systems, control and AI evaluation. Follow each project into its source or technical notes.</p></div>
+<div class="register">
+<article class="register-row"><span class="register-number">01</span><div><p class="eyebrow">Embedded ML / ESP32-S3</p><h3><a href="tinyml/">TinyML Deployer</a></h3><p>Model conversion, checked C++ generation and archived QEMU execution evidence.</p><p class="register-note"><a href="tinyml/#film">Watch Signal to Silicon / 36-second film →</a></p></div><a class="register-action" href="tinyml/">Case study →</a></article>
+<article class="register-row" id="motor-station"><span class="register-number">02</span><div><p class="eyebrow">Control systems / Python</p><h3><a href="articles/dc-motor-training-station/">DC Motor Training Station</a></h3><p>A desktop station bringing manual and ANFIS control, motor monitoring and session logging together. The GUI starts in simulation mode.</p><p class="register-note">Separate project from Neuro-Fuzzy Control.</p></div><a class="register-action" href="https://github.com/alexhaya4/dc_motor_training_station">Repository →</a></article>
+<article class="register-row"><span class="register-number">03</span><div><p class="eyebrow">Intelligent control / Raspberry Pi</p><h3><a href="https://github.com/alexhaya4/dc-motor-neuro-fuzzy">Neuro-Fuzzy Control</a></h3><p>An educational DC motor control platform for exploring conventional and neuro-fuzzy controllers. <a href="https://zenodo.org/records/20124685">DC motor research on Zenodo →</a></p></div><a class="register-action" href="https://github.com/alexhaya4/dc-motor-neuro-fuzzy">Repository →</a></article>
+<article class="register-row"><span class="register-number">04</span><div><p class="eyebrow">Embedded firmware / ESP32-S3</p><h3><a href="https://github.com/alexhaya4/esp32_can_display">CAN Display</a></h3><p>CAN reception and signal decoding with FreeRTOS and an LVGL display interface.</p></div><a class="register-action" href="https://github.com/alexhaya4/esp32_can_display">Repository →</a></article>
+<article class="register-row"><span class="register-number">05</span><div><p class="eyebrow">AI evaluation / Private source</p><h3><a href="#rl-gym">Rylgam / RL Gym</a></h3><p>A Python backend for AI agent evaluation, model integration and isolated background execution.</p></div><a class="register-action" href="#rl-gym">Project notes →</a></article>
+<article class="register-row"><span class="register-number">06</span><div><p class="eyebrow">Backend infrastructure / Python</p><h3><a href="https://github.com/alexhaya4/tradingsys">tradingsys</a></h3><p>A trading-system foundation covering domain models, configuration, TimescaleDB persistence, a hash-chained audit log and observability. Phase 1 infrastructure; trading strategies and order placement are not implemented.</p></div><a class="register-action" href="https://github.com/alexhaya4/tradingsys">Repository →</a></article>
+</div></section>
+<section class="catalogue writing-section" id="articles" aria-labelledby="articles-title">
+<div class="catalogue-heading"><div><p class="eyebrow">02 / Articles &amp; field notes</p><h2 id="articles-title">Inside the work.</h2></div><p>Technical walkthroughs that connect the implementation to its evidence.</p></div>
+<a class="article-entry" href="tinyml/"><span class="eyebrow">01 / Interactive case study</span><h3>From model graph to checked execution</h3><p>Trace TinyML Deployer through source, generated C++, compiled firmware and archived QEMU records.</p><span class="register-action">Read the TinyML study →</span></a>
+<a class="article-entry" href="articles/dc-motor-training-station/"><span class="eyebrow">02 / Source walkthrough</span><h3>Inside the DC motor training station</h3><p>A closer look at the desktop interface, control loop, simulation boundary and session data.</p><span class="register-action">Read the walkthrough →</span></a>
+</section>
+<section class="catalogue paper-teaser" id="papers" aria-labelledby="papers-title"><div><p class="eyebrow">03 / Papers</p><h2 id="papers-title">Research,<br>on the record.</h2><p>Work on motor control, CAN visualization and AI safety, alongside an unpublished manuscript on reward hacking and evaluation awareness.</p><a class="ink-link" href="papers/">Open the paper collection →</a></div><ol><li>Reward hacking / Unpublished</li><li>Neural-tuned fuzzy motor control</li><li>ESP32-S3 CAN visualization</li><li>Hallucination detection &amp; AI safety</li></ol></section>
+</main>
+<footer class="review-foot"><p>ESP32-S3 photograph: <a href="https://github.com/espressif/esp-dev-kits/blob/master/docs/_static/esp32-s3-devkitc-1/esp32-s3-devkitc-1-v1.1-isometric.png">Espressif</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.</p><div class="foot-links"><a href="#about">About</a><a href="#articles">Articles</a><a href="papers/">Papers</a></div></footer>
+</body></html>
