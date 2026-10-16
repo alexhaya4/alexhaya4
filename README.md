@@ -8,9 +8,9 @@ I build Python backends, AI evaluation tools and model-deployment workflows. My 
 
 Based in Nairobi, with an electrical and electronics engineering background and professional experience in AI evaluation and agent red teaming at Turing.
 
-**[Portfolio](https://alexhaya4.github.io/alexhaya4/)** · [Research](https://alexhaya4.github.io/alexhaya4/papers/)
+**[Open Source Projects](#open-source-projects)** · [Other Public Repositories](#other-public-repositories) · [Portfolio](https://alexhaya4.github.io/alexhaya4/) · [Research](https://alexhaya4.github.io/alexhaya4/papers/)
 
-## 01 / Skills
+## Skills
 
 | Area | Skills and implementation work |
 | :--- | :--- |
@@ -19,9 +19,13 @@ Based in Nairobi, with an electrical and electronics engineering background and 
 | **AI evaluation and red teaming** | Adversarial scenarios, agent tool-use evaluation, coding evaluation tasks, rubric-based assessment and reproducible failure cases. |
 | **ML and embedded systems** | TensorFlow/Keras, TensorFlow Lite Micro, C/C++, ESP-IDF, FreeRTOS and CAN/TWAI. |
 
-## 02 / Selected implementation work
+## Open Source Projects
+
+MIT-licensed projects with public source code, documentation and implementation evidence.
 
 ### TinyML Deployer
+
+**Open source · [MIT license](https://github.com/alexhaya4/tinyml-deployer/blob/main/LICENSE)**
 
 **Python · TensorFlow Lite Micro · C++ · ESP-IDF · Espressif QEMU**
 
@@ -33,18 +37,29 @@ A Python CLI that converts models, checks prediction error and generates model-s
 
 <sub>Film and poster: Alex Haya. Board photograph: <a href="https://github.com/espressif/esp-dev-kits/blob/master/docs/_static/esp32-s3-devkitc-1/esp32-s3-devkitc-1-v1.1-isometric.png">Espressif</a>, cropped and animated. Media: <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.</sub>
 
-| Project | What to inspect |
-| :--- | :--- |
-| [tradingsys](https://github.com/alexhaya4/tradingsys) | Python backend infrastructure, TimescaleDB persistence, a hash-chained audit log and observability. Phase 1 infrastructure; strategies and order placement are not implemented. |
-| [Neuro-Fuzzy Control](https://github.com/alexhaya4/dc-motor-neuro-fuzzy) | Python, Raspberry Pi, PI/PID control and neural-tuned fuzzy controllers. [Research record](https://zenodo.org/records/20124685). |
-| [DC Motor Training Station](https://github.com/alexhaya4/dc_motor_training_station) | Python desktop development, manual and ANFIS control, monitoring and session logs. Starts in simulation mode. |
-| [CAN Display](https://github.com/alexhaya4/esp32_can_display) | C, ESP32-S3, FreeRTOS, CAN/TWAI and LVGL. Signal decoding and queue-based display updates. |
+### Neuro-Fuzzy Control
 
-## 03 / Experience and current work
+**Open source · [MIT license](https://github.com/alexhaya4/dc-motor-neuro-fuzzy/blob/main/LICENSE)**
+
+A Python and Raspberry Pi platform for DC motor-speed control, with PI, PID and neural-tuned fuzzy controllers.
+
+**[Source](https://github.com/alexhaya4/dc-motor-neuro-fuzzy)** · [Research record](https://zenodo.org/records/20124685)
+
+## Other Public Repositories
+
+| Repository | Implementation | License |
+| :--- | :--- | :--- |
+| [tradingsys](https://github.com/alexhaya4/tradingsys) | Python backend infrastructure, TimescaleDB persistence, a hash-chained audit log and observability. Phase 1 infrastructure; strategies and order placement are not implemented. | [Proprietary](https://github.com/alexhaya4/tradingsys/blob/main/pyproject.toml) |
+| [DC Motor Training Station](https://github.com/alexhaya4/dc_motor_training_station) | Python desktop development, manual and ANFIS control, monitoring and session logs. Starts in simulation mode. | Not declared |
+| [CAN Display](https://github.com/alexhaya4/esp32_can_display) | C, ESP32-S3, FreeRTOS, CAN/TWAI and LVGL. Signal decoding and queue-based display updates. | Not declared |
+
+## Professional Experience
 
 **Turing · AI Training & Evaluation Specialist · Aug 2025 to Feb 2026**
 
 Agent red teaming, coding evaluation tasks and reproducible failure cases, alongside contributor team leadership. My evaluation work includes instruction following, tool selection, tool arguments, reasoning quality and whether observed results support the final answer.
+
+## Private Work
 
 **Rylgam / RL Gym · Founder & Engineer · Jan 2026 to present**
 
@@ -52,7 +67,7 @@ I am developing an AI agent evaluation platform: Python backend, model API clien
 
 [Project notes](https://alexhaya4.github.io/alexhaya4/#rl-gym)
 
-## 04 / AI safety research
+## AI Safety Research
 
 [Hallucination Detection and Vulnerability Discovery in Large Language Models](https://alexhaya4.github.io/alexhaya4/papers/#ai-safety): a manuscript on adversarial evaluation, hallucination types and grounding verification.
 
