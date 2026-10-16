@@ -1,116 +1,47 @@
-![Alex Haya. AI evaluation, embedded systems, and applied machine learning.](assets/banner.svg)
+# Alex Odhiambo Haya
 
-# Alex Haya
+![HAYA. Python services, AI evaluation and embedded systems. Nairobi, Kenya.](assets/banner.svg)
 
-**AI Evaluation and Security | Embedded Systems | Applied Machine Learning**
+I'm a backend engineer in Nairobi with a background in electrical and electronics engineering. I build Python APIs and background workers, design evaluations for AI agents, and write firmware for connected devices.
 
-I work across AI evaluation, cybersecurity, and embedded systems, with a background in electrical and electronics engineering. I build tools that connect model behavior, software reliability, and physical systems.
+**[Portfolio](https://alexhaya4.github.io/alexhaya4/)** · [Research](https://alexhaya4.github.io/alexhaya4/papers/)
 
-My work spans Python APIs, evaluation infrastructure, microcontroller firmware, and intelligent control. I focus on clear evaluation criteria, failure analysis, and implementations that can be inspected and tested.
+## 01 / TinyML Deployer
 
-[Portfolio website](https://alexhaya4.github.io/alexhaya4/) · [TinyML case study](https://alexhaya4.github.io/alexhaya4/projects/tinyml-deployer/) · [Public projects](#selected-public-projects) · [Current work](#current-work-rl-gym) · [Technical focus](#technical-focus) · [LinkedIn](https://ke.linkedin.com/in/alex-haya)
+**From a model graph to compiled ESP32-S3 firmware.**
 
-## Featured: TinyML Deployer
+A Python CLI for converting models, checking prediction error and generating ESP-IDF C++. The generated application registers the model's operators and checks its input buffers, output buffers and inference results.
 
-**Validate ESP32-S3 firmware in QEMU without a physical board.**
+Float32 and INT8 test fixtures run in Espressif QEMU. Their archived reports record the model, validation inputs and individual predictions. Physical-board validation remains pending.
 
-Original model graphs, explicit prediction-error gates, generated ESP-IDF C++ and traceable execution reports. Float32 and INT8 integration fixtures each completed 24 QEMU observations within their configured error limits. Physical-board validation remains pending.
+[![Signal to Silicon. Watch the 36-second TinyML film.](assets/signal-to-silicon-poster.jpg)](https://alexhaya4.github.io/alexhaya4/tinyml/#film)
 
-[![TinyML Deployer: original graphs, checked C++ and compiled ESP32-S3 execution.](assets/tinyml-poster.png)](projects/tinyml-deployer/README.md)
+**[Watch Signal to Silicon](https://alexhaya4.github.io/alexhaya4/tinyml/#film)** · [Case study](https://alexhaya4.github.io/alexhaya4/tinyml/) · [Source](https://github.com/alexhaya4/tinyml-deployer) · [Execution reports](https://github.com/alexhaya4/tinyml-deployer/tree/main/docs/evidence/qemu-2026-10-13)
 
-**[Read the project case study](https://alexhaya4.github.io/alexhaya4/projects/tinyml-deployer/)** · [GitHub text version](projects/tinyml-deployer/README.md) · [View on GitHub](https://github.com/alexhaya4/tinyml-deployer) · [Release v0.2.0-beta.1](https://github.com/alexhaya4/tinyml-deployer/releases/tag/v0.2.0-beta.1)
+<sub>Film and poster: Alex Haya. Board photograph: <a href="https://github.com/espressif/esp-dev-kits/blob/master/docs/_static/esp32-s3-devkitc-1/esp32-s3-devkitc-1-v1.1-isometric.png">Espressif</a>, cropped and animated. Media: <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.</sub>
 
-## Current work: RL Gym
+## 02 / Rylgam
 
-I am developing **RL Gym**, a Python platform for reinforcement learning, machine learning workflows, and AI agent evaluation.
+**AI agent evaluation. Current development, private source.**
 
-The platform brings together experiment tracking, dataset management, model evaluation, and background job processing. My current focus includes repeated-run evaluation, evaluator-controlled scoring, adversarial testing, and reliable execution.
+I build the Python backend, model API clients and background workers for Rylgam, also called RL Gym. The work includes isolated agent execution, tenant access controls and usage tracking.
 
-**Technologies:** Python, FastAPI, PostgreSQL, Redis, Docker, PyTorch, Gymnasium, and scikit-learn.
+FastAPI, PostgreSQL and Redis support the backend; React and TypeScript support the interface. Current development includes retrieval with pgvector and preparation for AWS deployment.
 
-![Conceptual RL Gym workflow: FastAPI records a run in PostgreSQL and queues work through Redis. An arq worker runs the evaluation harness, which stores results in PostgreSQL.](assets/rl-gym-workflow.gif)
+[Project notes](https://alexhaya4.github.io/alexhaya4/#rl-gym)
 
-*Architecture illustration of the main queued path. Animation shows execution order, not live activity or measured performance. [View the static diagram](assets/rl-gym-workflow.png).*
+## 03 / Control, firmware and backend work
 
-The source repository is private. The projects below provide public examples of my implementation work.
+| Project | What is in the repository |
+| :--- | :--- |
+| [Neuro-Fuzzy Control](https://github.com/alexhaya4/dc-motor-neuro-fuzzy) | Raspberry Pi motor-speed control with PI, PID and neural-tuned fuzzy controllers. [Research record](https://zenodo.org/records/20124685). |
+| [DC Motor Training Station](https://github.com/alexhaya4/dc_motor_training_station) | A desktop interface for manual and ANFIS control, motor monitoring and session logs. Starts in simulation mode. [Source walkthrough](https://alexhaya4.github.io/alexhaya4/articles/dc-motor-training-station/). |
+| [CAN Display](https://github.com/alexhaya4/esp32_can_display) | ESP32-S3 firmware that receives CAN frames, decodes a signal and passes values through a FreeRTOS queue to an LVGL gauge. |
+| [tradingsys](https://github.com/alexhaya4/tradingsys) | Domain models, TimescaleDB persistence, a hash-chained audit log and observability. Phase 1 infrastructure; strategies and order placement are not implemented. |
 
-## Selected public projects
+## 04 / Research
 
-![Three implementation sketches: TinyML original graph to checked C++ to ESP32-S3 QEMU; speed reference through a controller to a motor; CAN frame through decoding and a queue to an LVGL gauge.](assets/projects.svg)
+**What Resists Relocation** asks whether a benchmark task can be rewritten as a deployment request while preserving its technical substance and exploitable verifier flaw. The unpublished manuscript studies task-pair construction and its measurement limits. The downstream experiment on evaluation framing and reward hacking has not been run.
 
-The sketches summarize the implementations linked below.
-
-### TinyML Deployer
-
-**Validated model conversion and ESP32-S3 firmware execution.**
-
-A Python CLI that takes original Keras, SavedModel and ONNX graphs through conversion and quantization, checks prediction error on supplied validation inputs, and generates model-specific ESP-IDF C++ firmware.
-
-- Quantization gates use explicit error limits and supplied calibration data where required.
-- Generated C++ registers model operators, checks input/output buffers, and applies explicit arena and flash budgets.
-- Pinned Espressif QEMU runs the compiled float32 and INT8 ESP32-S3 fixtures with ESP-NN optimizations enabled.
-- JSON and HTML reports preserve model and dataset identities, complete observations, and prediction agreement.
-
-**Current source version:** `0.2.0b1` (beta). Physical-board validation remains pending. STM32 profiles support analysis only.
-
-[![Animated preview of recorded TinyML quantization and ESP32-S3 emulator validation.](https://raw.githubusercontent.com/alexhaya4/tinyml-deployer/main/docs/walkthrough/v0.2.0-beta.1/preview.gif)](https://github.com/alexhaya4/tinyml-deployer/blob/main/docs/walkthrough/v0.2.0-beta.1/walkthrough.mp4)
-
-**[Watch the 54-second walkthrough](https://github.com/alexhaya4/tinyml-deployer/blob/main/docs/walkthrough/v0.2.0-beta.1/walkthrough.mp4)** · [Static poster](https://github.com/alexhaya4/tinyml-deployer/blob/main/docs/walkthrough/v0.2.0-beta.1/poster.png) · [Transcript and reproduction](https://github.com/alexhaya4/tinyml-deployer/tree/main/docs/walkthrough/v0.2.0-beta.1)
-
-*Captioned, silent replay of recorded CLI output. The sine conversion example and the two compiled emulator fixtures are identified separately; presentation timing is edited.*
-
-The archived float32 and INT8 fixtures each completed 24 QEMU inference observations within their configured prediction-error limits. These are different test graphs, each compared with its own desktop model. The results do not establish comparative task accuracy, quantization savings, or physical-board speed.
-
-**Stack:** Python, TensorFlow Lite Micro, C++, ESP-IDF, ESP-NN, Espressif QEMU, Click, pytest.
-
-[Case study](projects/tinyml-deployer/README.md) · [Repository](https://github.com/alexhaya4/tinyml-deployer) · [Release notes](https://github.com/alexhaya4/tinyml-deployer/blob/main/docs/releases/v0.2.0-beta.1.md) · [Archived CI evidence](https://github.com/alexhaya4/tinyml-deployer/tree/main/docs/evidence/qemu-2026-10-13) · [Tests](https://github.com/alexhaya4/tinyml-deployer/tree/main/tests)
-
-### Neuro-Fuzzy DC Motor Control
-
-**Comparing conventional and adaptive control approaches.**
-
-A Raspberry Pi motor-control project with PI, PID, fuzzy logic, and neural-tuned fuzzy controllers. It combines control algorithms with a desktop interface, sensor feedback, plotting, and data export.
-
-- PI/PID implementations with anti-windup and derivative filtering.
-- Neural networks used to tune the scaling factors of a Mamdani fuzzy controller.
-- Controller comparison through recorded responses and performance metrics.
-
-**Stack:** Python, Raspberry Pi, TensorFlow/Keras, NumPy, GPIO, PWM.
-
-[Repository](https://github.com/alexhaya4/dc-motor-neuro-fuzzy) · [PI/PID implementation](https://github.com/alexhaya4/dc-motor-neuro-fuzzy/blob/main/conventional_controllers.py) · [Neural-tuned controller](https://github.com/alexhaya4/dc-motor-neuro-fuzzy/blob/main/neural_tuned_fuzzy_controller.py)
-
-### ESP32 CAN Display
-
-**Turning CAN bus signals into an embedded gauge interface.**
-
-An ESP-IDF firmware project that receives CAN frames through the TWAI driver, decodes a signal, and updates an LVGL gauge.
-
-- Separate FreeRTOS tasks for CAN reception and display updates.
-- Queue-based transfer of decoded values to the interface.
-- Signal scaling, range checks, numeric readout, and threshold-based colors.
-
-**Stack:** C, ESP32-S3, ESP-IDF, FreeRTOS, CAN/TWAI, LVGL.
-
-[Repository](https://github.com/alexhaya4/esp32_can_display) · [Firmware](https://github.com/alexhaya4/esp32_can_display/blob/master/main/main.c)
-
-## Technical focus
-
-| Area | Focus |
-| --- | --- |
-| AI evaluation and security | Agent evaluation, adversarial testing, repeated-run analysis, failure investigation |
-| Backend engineering | Python, FastAPI, SQLAlchemy, PostgreSQL, Redis, Docker |
-| Embedded systems | C/C++, ESP32, STM32, FreeRTOS, CAN/TWAI, LVGL |
-| Applied ML and control | TensorFlow/Keras, PyTorch, scikit-learn, PID, fuzzy logic, model deployment |
-
-## Connect
-
-For engineering collaborations and project discussions, connect with me through [GitHub](https://github.com/alexhaya4) or [LinkedIn](https://ke.linkedin.com/in/alex-haya).
-
-<details>
-<summary>About the visuals</summary>
-
-Original SVG illustrations and an animated architecture diagram, with visual inspiration from [Beautiful UI](https://www.beautifului.dev/): charcoal surfaces, rounded cards, compact labels, and a dotted workflow canvas. The project sketches and RL Gym animation are conceptual diagrams. The TinyML preview replays recorded CLI output and links to its transcript and evidence. Portfolio illustrations are stored here; TinyML media is stored in the TinyML Deployer repository.
-
-</details>
-
+[Research summary](https://alexhaya4.github.io/alexhaya4/papers/#reward-hacking) · [Motor control, CAN visualization and AI safety papers](https://alexhaya4.github.io/alexhaya4/papers/)
 
