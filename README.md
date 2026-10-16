@@ -8,7 +8,17 @@ I work across AI evaluation, cybersecurity, and embedded systems, with a backgro
 
 My work spans Python APIs, evaluation infrastructure, microcontroller firmware, and intelligent control. I focus on clear evaluation criteria, failure analysis, and implementations that can be inspected and tested.
 
-[Public projects](#selected-public-projects) · [Current work](#current-work-rl-gym) · [Technical focus](#technical-focus) · [LinkedIn](https://ke.linkedin.com/in/alex-haya)
+[TinyML case study](projects/tinyml-deployer/README.md) · [Public projects](#selected-public-projects) · [Current work](#current-work-rl-gym) · [Technical focus](#technical-focus) · [LinkedIn](https://ke.linkedin.com/in/alex-haya)
+
+## Featured: TinyML Deployer
+
+**Validate ESP32-S3 firmware in QEMU without a physical board.**
+
+Original model graphs, explicit prediction-error gates, generated ESP-IDF C++ and traceable execution reports. Float32 and INT8 integration fixtures each completed 24 QEMU observations within their configured error limits. Physical-board validation remains pending.
+
+[![TinyML Deployer: original graphs, checked C++ and compiled ESP32-S3 execution.](assets/tinyml-poster.png)](projects/tinyml-deployer/README.md)
+
+**[Read the project case study](projects/tinyml-deployer/README.md)** · [View on GitHub](https://github.com/alexhaya4/tinyml-deployer) · [Release v0.2.0-beta.1](https://github.com/alexhaya4/tinyml-deployer/releases/tag/v0.2.0-beta.1)
 
 ## Current work: RL Gym
 
@@ -53,7 +63,7 @@ The archived float32 and INT8 fixtures each completed 24 QEMU inference observat
 
 **Stack:** Python, TensorFlow Lite Micro, C++, ESP-IDF, ESP-NN, Espressif QEMU, Click, pytest.
 
-[Repository](https://github.com/alexhaya4/tinyml-deployer) · [Beta notes](https://github.com/alexhaya4/tinyml-deployer/blob/main/docs/releases/v0.2.0-beta.1.md) · [Archived CI evidence](https://github.com/alexhaya4/tinyml-deployer/tree/main/docs/evidence/qemu-2026-10-13) · [Tests](https://github.com/alexhaya4/tinyml-deployer/tree/main/tests)
+[Case study](projects/tinyml-deployer/README.md) · [Repository](https://github.com/alexhaya4/tinyml-deployer) · [Release notes](https://github.com/alexhaya4/tinyml-deployer/blob/main/docs/releases/v0.2.0-beta.1.md) · [Archived CI evidence](https://github.com/alexhaya4/tinyml-deployer/tree/main/docs/evidence/qemu-2026-10-13) · [Tests](https://github.com/alexhaya4/tinyml-deployer/tree/main/tests)
 
 ### Neuro-Fuzzy DC Motor Control
 
@@ -102,4 +112,5 @@ For engineering collaborations and project discussions, connect with me through 
 Original SVG illustrations and an animated architecture diagram, with visual inspiration from [Beautiful UI](https://www.beautifului.dev/): charcoal surfaces, rounded cards, compact labels, and a dotted workflow canvas. The project sketches and RL Gym animation are conceptual diagrams. The TinyML preview replays recorded CLI output and links to its transcript and evidence. Portfolio illustrations are stored here; TinyML media is stored in the TinyML Deployer repository.
 
 </details>
+
 

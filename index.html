@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Alex Haya | AI Evaluation, Embedded Systems and Applied ML</title>
+  <meta name="description" content="Alex Haya builds AI evaluation infrastructure, embedded firmware and applied machine learning tools. Explore TinyML Deployer and validated ESP32-S3 QEMU execution.">
+  <link rel="canonical" href="https://alexhaya4.github.io/alexhaya4/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Alex Haya | AI Evaluation and Embedded Systems">
+  <meta property="og:description" content="Engineering work across model evaluation, reliable software and physical systems. Featuring TinyML Deployer for ESP32-S3.">
+  <meta property="og:url" content="https://alexhaya4.github.io/alexhaya4/">
+  <meta property="og:image" content="https://alexhaya4.github.io/alexhaya4/assets/tinyml-poster.png">
+  <meta property="og:image:alt" content="TinyML Deployer recorded workflow: original graphs, checked C++ and ESP32-S3 QEMU execution.">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="assets/site.css">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Person","name":"Alex Haya","url":"https://alexhaya4.github.io/alexhaya4/","sameAs":["https://github.com/alexhaya4","https://ke.linkedin.com/in/alex-haya"],"knowsAbout":["AI evaluation","Cybersecurity","Embedded systems","Applied machine learning"]}
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="./" aria-current="page">Alex Haya</a>
+      <nav aria-label="Main navigation">
+        <a href="#projects">Projects</a>
+        <a href="#current-work">Current work</a>
+        <a href="#connect">Connect</a>
+        <a href="https://github.com/alexhaya4">GitHub</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main" class="wrap">
+    <section class="hero" aria-labelledby="intro-title">
+      <p class="eyebrow">AI evaluation / Embedded systems / Applied ML</p>
+      <h1 id="intro-title">Models, software.<br>Physical systems.</h1>
+      <p class="lead">I work across AI evaluation, cybersecurity and embedded systems, with a background in electrical and electronics engineering. I build tools that connect model behavior, software reliability and physical systems.</p>
+      <p class="reading muted">My work spans Python APIs, evaluation infrastructure, microcontroller firmware and intelligent control. I focus on clear evaluation criteria, failure analysis and implementations that can be inspected and tested.</p>
+      <div class="actions">
+        <a class="button primary" href="projects/tinyml-deployer/">Explore TinyML Deployer</a>
+        <a class="button" href="#projects">View selected projects</a>
+      </div>
+    </section>
+    <section id="projects" class="section" aria-labelledby="projects-title">
+      <p class="eyebrow">Selected public work</p>
+      <h2 id="projects-title">From model to execution.</h2>
+      <p class="section-intro">Public implementations across machine learning deployment, motor control and embedded interfaces.</p>
+      <article class="feature">
+        <div>
+          <p class="eyebrow">Featured project / v0.2.0-beta.1</p>
+          <h3>TinyML Deployer</h3>
+          <p>Validate model predictions, generate ESP-IDF firmware and check compiled ESP32-S3 execution in QEMU without a physical board.</p>
+          <div class="badges" aria-label="Project technologies">
+            <span class="badge accent">ESP32-S3</span><span class="badge">Python + C++</span><span class="badge">Espressif QEMU</span>
+          </div>
+          <p class="meta">Float32 and INT8 integration fixtures verified in CI. Physical-board validation remains pending.</p>
+          <div class="actions">
+            <a class="button primary" href="projects/tinyml-deployer/">Read the case study</a>
+            <a href="https://github.com/alexhaya4/tinyml-deployer">View repository</a>
+          </div>
+        </div>
+        <figure>
+          <a href="projects/tinyml-deployer/#walkthrough" aria-label="Watch the TinyML Deployer walkthrough">
+            <img src="assets/tinyml-poster.png" width="1280" height="720" alt="TinyML Deployer walkthrough poster showing original graphs, checked C++ and compiled ESP32-S3 execution." fetchpriority="high">
+          </a>
+          <figcaption>A 54-second edited replay of recorded CLI output, with linked command records and reports.</figcaption>
+        </figure>
+      </article>
+      <div class="grid" style="margin-top:1.5rem">
+        <article class="card">
+          <p class="eyebrow">Control systems</p>
+          <h3>Neuro-Fuzzy DC Motor Control</h3>
+          <p>Compare PI, PID, fuzzy logic and neural-tuned fuzzy controllers in a Raspberry Pi motor-control project, with sensor feedback, plotting and data export.</p>
+          <p class="meta">Python / Raspberry Pi / TensorFlow / GPIO / PWM</p>
+          <a href="https://github.com/alexhaya4/dc-motor-neuro-fuzzy">Explore motor-control implementation</a>
+        </article>
+        <article class="card">
+          <p class="eyebrow">Embedded interfaces</p>
+          <h3>ESP32 CAN Display</h3>
+          <p>Receive CAN frames through the TWAI driver, decode a signal and update an LVGL gauge through separate FreeRTOS tasks and a queue.</p>
+          <p class="meta">C / ESP32-S3 / ESP-IDF / FreeRTOS / CAN / LVGL</p>
+          <a href="https://github.com/alexhaya4/esp32_can_display">Explore CAN display firmware</a>
+        </article>
+      </div>
+    </section>
+    <section id="current-work" class="section" aria-labelledby="work-title">
+      <div class="grid">
+        <div>
+          <p class="eyebrow">Current work / Private source</p>
+          <h2 id="work-title">RL Gym</h2>
+          <p class="lead">A Python platform for reinforcement learning, machine learning workflows and AI agent evaluation.</p>
+        </div>
+        <div class="card">
+          <p>The platform brings together experiment tracking, dataset management, model evaluation and background job processing.</p>
+          <p>My current focus includes repeated-run evaluation, evaluator-controlled scoring, adversarial testing and reliable execution.</p>
+          <p class="meta">Python / FastAPI / PostgreSQL / Redis / Docker / PyTorch / Gymnasium / scikit-learn</p>
+          <p class="meta">The source repository is private. Selected public projects provide inspectable examples of my implementation work.</p>
+        </div>
+      </div>
+    </section>
+    <section class="section" aria-labelledby="focus-title">
+      <p class="eyebrow">Technical focus</p>
+      <h2 id="focus-title">Reliable across boundaries.</h2>
+      <div class="grid">
+        <div><h3>AI evaluation and security</h3><p class="muted">Agent evaluation, adversarial testing, repeated-run analysis and failure investigation.</p></div>
+        <div><h3>Backend engineering</h3><p class="muted">Python, FastAPI, SQLAlchemy, PostgreSQL, Redis and Docker.</p></div>
+        <div><h3>Embedded systems</h3><p class="muted">C/C++, ESP32, STM32, FreeRTOS, CAN/TWAI and LVGL.</p></div>
+        <div><h3>Applied ML and control</h3><p class="muted">TensorFlow/Keras, PyTorch, scikit-learn, PID, fuzzy logic and model deployment.</p></div>
+      </div>
+    </section>
+    <section id="connect" class="section" aria-labelledby="connect-title">
+      <p class="eyebrow">Engineering collaborations</p>
+      <h2 id="connect-title">Build, test, investigate.</h2>
+      <p class="section-intro">For engineering collaborations and project discussions, connect with me on GitHub or LinkedIn. ESP32-S3 owners can help extend TinyML Deployer's validation to physical hardware.</p>
+      <div class="actions">
+        <a class="button primary" href="https://github.com/alexhaya4">Connect on GitHub</a>
+        <a class="button" href="https://ke.linkedin.com/in/alex-haya">Connect on LinkedIn</a>
+        <a href="projects/tinyml-deployer/#contribute">Help validate TinyML on a board</a>
+      </div>
+    </section>
+  </main>
+  <footer><div class="wrap footer-inner"><p>Alex Haya / Engineering portfolio</p><a href="https://github.com/alexhaya4/alexhaya4">Portfolio source</a></div></footer>
+</body>
+</html>
+
