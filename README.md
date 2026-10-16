@@ -8,7 +8,7 @@ I work across AI evaluation, cybersecurity, and embedded systems, with a backgro
 
 My work spans Python APIs, evaluation infrastructure, microcontroller firmware, and intelligent control. I focus on clear evaluation criteria, failure analysis, and implementations that can be inspected and tested.
 
-[TinyML case study](projects/tinyml-deployer/README.md) · [Public projects](#selected-public-projects) · [Current work](#current-work-rl-gym) · [Technical focus](#technical-focus) · [LinkedIn](https://ke.linkedin.com/in/alex-haya)
+[Portfolio website](https://alexhaya4.github.io/alexhaya4/) · [TinyML case study](https://alexhaya4.github.io/alexhaya4/projects/tinyml-deployer/) · [Public projects](#selected-public-projects) · [Current work](#current-work-rl-gym) · [Technical focus](#technical-focus) · [LinkedIn](https://ke.linkedin.com/in/alex-haya)
 
 ## Featured: TinyML Deployer
 
@@ -18,7 +18,7 @@ Original model graphs, explicit prediction-error gates, generated ESP-IDF C++ an
 
 [![TinyML Deployer: original graphs, checked C++ and compiled ESP32-S3 execution.](assets/tinyml-poster.png)](projects/tinyml-deployer/README.md)
 
-**[Read the project case study](projects/tinyml-deployer/README.md)** · [View on GitHub](https://github.com/alexhaya4/tinyml-deployer) · [Release v0.2.0-beta.1](https://github.com/alexhaya4/tinyml-deployer/releases/tag/v0.2.0-beta.1)
+**[Read the project case study](https://alexhaya4.github.io/alexhaya4/projects/tinyml-deployer/)** · [GitHub text version](projects/tinyml-deployer/README.md) · [View on GitHub](https://github.com/alexhaya4/tinyml-deployer) · [Release v0.2.0-beta.1](https://github.com/alexhaya4/tinyml-deployer/releases/tag/v0.2.0-beta.1)
 
 ## Current work: RL Gym
 
